@@ -17,6 +17,8 @@ compare_text = 'ПОРІВНЯТИ ЦІНИ'
 search_box_xpath = '//*[@id="searchbox"]'
 search_button_xpath = '//*[@id="doSearch"]'
 
+search_box_css = "[id='searchbox']"
+
 add_to_list_css = '#page-search > div.cell-fixed-indent.cell-md > div > div:nth-child(1) > div > div.clearfix > div > ul > li:nth-child(1) > div.item-info > ul > li > span > span.crutch-data'
 compare_prices_css = '#page-search > div.cell-fixed-indent.cell-md > div > div:nth-child(1) > div > div.clearfix > div > ul > li:nth-child(1) > div.item-price.stick-bottom > div:nth-child(2) > a'
 
@@ -36,6 +38,7 @@ while not check_page_loaded(driver):
 
 driver.find_element_by_xpath(
     search_button_xpath).click()   # click search button
+
 
 time.sleep(2)
 
